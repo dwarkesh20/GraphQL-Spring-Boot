@@ -1,7 +1,7 @@
 type Mutation{
-createBook(bookReq:BookReq):Book
-deleteBook(id:String):Boolean
-updateBook(book:BookInp):Book
+	createBook(bookReq:BookReq):Book
+	deleteBook(id:String):Boolean
+	updateBook(book:BookInp):Book
 }
 
 

@@ -42,12 +42,12 @@ public class BookServiceImpl implements BookService {
 	@Override
 	@CacheEvict(cacheNames = "books", key = "#id")
 	public Boolean deleteBook(String id) {
-		if (repo.existsById(id)) {
-			repo.deleteById(id);
-			logger.warn("Book deleted: "+id);
-			return true;
+		if (!repo.existsById(id)) {
+			return false;			
 		}
-		return false;
+		repo.deleteById(id);
+		logger.warn("Book deleted: "+id);
+		return true;
 
 	}
 

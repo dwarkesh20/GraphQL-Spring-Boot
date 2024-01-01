@@ -11,7 +11,7 @@
 	<groupId>com.einfochips.graphql</groupId>
 	<artifactId>spring-graphQL</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>spring-graphQL</name>
 	<description>Spring boot graphQL project for Spring Boot</description>
 	<properties>
@@ -77,6 +77,7 @@
 		</dependency>
 	</dependencies>
 	<build>
+		<finalName>spring-boot-docker</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
